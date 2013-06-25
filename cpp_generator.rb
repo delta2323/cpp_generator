@@ -3,7 +3,7 @@
 require 'erb'
 
 def to_lower_camel(tokens, delimiter)
-  return "" if tokens.empty
+  return "" if tokens.empty?
   ret = tokens.dup
   ret[0].downcase!
   ret[1..-1].each{|t| t.capitalize!}
