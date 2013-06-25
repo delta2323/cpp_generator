@@ -1,9 +1,9 @@
 #include <gtest/gtest.h>
-#include "<%= capitalized_classname %>.hpp"
+#include "<%= classname %>.hpp"
 
 <%= namespace.map{|n| "namespace #{n}{"}.join("\n") %>
 
-TEST(<%= upcased_classname %>, trivial){
+TEST(<%= classname %>, trivial){
   ASSERT_TRUE(true)
 }
 

@@ -1,8 +1,8 @@
 #include <iostream>
-#include "<%= capitalized_classname %>.hpp"
+#include "<%= classname %>.hpp"
 #include "cmdline.h"
 
-using <%= namespace.map{|n| "namespace #{n}{"}.join("::") %>::<%= capitalized_classname %>
+using <%= namespace.map{|n| "namespace #{n}{"}.join("::") %>::<%= classname %>
 
 int main(int argc, char** argv){
   cmdline::parser p;
