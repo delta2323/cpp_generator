@@ -23,7 +23,7 @@ def convert(tokens, convention_type)
     return to_upper_camel tokens, ""
   elsif convention_type == :lower_camel
     return to_lower_camel tokens, ""
-  elsif convention_type == :snake_camel
+  elsif convention_type == :snake
     return to_snake tokens, "_"
   else
     raise "Unsupporeted contention type=#{convention_type}"
