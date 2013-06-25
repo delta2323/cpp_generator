@@ -32,8 +32,8 @@ public:
 private:
 };
 
-} // foo
 } // bar
+} // foo
 
 #endif // IDGENERATOR_HPP_
 ```
