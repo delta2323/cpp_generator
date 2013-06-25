@@ -1,0 +1,14 @@
+#ifndef <%= upcased_classname %>_HPP_
+#define <%= upcased_classname %>_HPP_
+
+<%= namespace.map{|n| "namespace #{n}{"}.join("\n") %>
+
+class <%= capitalized_classname %>{
+public:
+
+private:
+};
+
+<%= namespace.map{|n| "} // #{n}"}.join("\n") %>
+
+#endif // <%= upcased_classname %>_HPP_
