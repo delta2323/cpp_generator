@@ -9,6 +9,6 @@ public:
 private:
 };
 
-<%= namespace.map{|n| "} // #{n}"}.join("\n") %>
+<%= namespace.reverse.map{|n| "} // #{n}"}.join("\n") %>
 
 #endif // <%= upcased_classname %>_HPP_

@@ -7,4 +7,4 @@ TEST(<%= classname %>, trivial){
   ASSERT_TRUE(true)
 }
 
-<%= namespace.map{|n| "} // #{n}"}.join("\n") %>
+<%= namespace.reverse.map{|n| "} // #{n}"}.join("\n") %>

@@ -6,4 +6,4 @@ void <%= classname %>::MethodName(ArgumentType arg)){
 
 }
 
-<%= namespace.map{|n| "} // #{n}"}.join("\n") %>
+<%= namespace.reverse.map{|n| "} // #{n}"}.join("\n") %>
