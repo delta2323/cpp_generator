@@ -1,18 +1,16 @@
 generator for c++ class(.cpp, .hpp, unittest, mainfile)
 
 Print Usage
-
 ```bash
 $ cpp_generator.rb --help
 ```
 
 Example
-
 ```bash
 $ cpp_generator.rb  --classname id_generator --namespace foo::bar --source_convention snake --class_convention upper_camel --main
 ```
 
-This command will create
+This command will create:
 
 - id_generator.hpp
 - id_generator.cpp
