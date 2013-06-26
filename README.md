@@ -7,7 +7,7 @@ $ cpp_generator.rb --help
 
 Example
 ```bash
-$ cpp_generator.rb  --classname id_generator --namespace foo::bar --source_convention snake --class_convention upper_camel --main
+$ cpp_generator.rb  --classname id_generator --namespace foo::bar --source-name-convention snake --class-name-convention upper_camel --main
 ```
 
 This command will create:
