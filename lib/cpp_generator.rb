@@ -74,10 +74,10 @@ def parse_option(argv)
     option[:namespace] = v.split("::")
   }
   opt.on("-m", "--main", "if true, generate main file [=false]"){|v| option[:main] = true}
-  opt.on("-s convention", "--source-convention type", /(camel|upper_camel|lower_camel|snake)/, "specify naming convention type of source files (one of camel/upper_case/lower_camel/snake) [=upper_camel]"){|v| 
+  opt.on("-s convention", "--source-name-convention type", /(camel|upper_camel|lower_camel|snake)/, "specify naming convention type of source files (one of camel/upper_case/lower_camel/snake) [=upper_camel]"){|v| 
     option[:source_convention] = v.to_sym
   }
-  opt.on("-C convention", "--class-convention type", /(camel|upper_camel|lower_camel|snake)/, "specify naming convention type of class name (one of camel/upper_camel/lower_camel/snake) [=upper_camel]"){|v|
+  opt.on("-C convention", "--class-name-convention type", /(camel|upper_camel|lower_camel|snake)/, "specify naming convention type of class name (one of camel/upper_camel/lower_camel/snake) [=upper_camel]"){|v|
     option[:class_convention] = v.to_sym
   }
   opt.parse! argv
