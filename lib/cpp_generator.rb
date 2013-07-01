@@ -44,19 +44,20 @@ def main(option)
   classname = convert option[:classname], option[:class_convention]
   namespace = option[:namespace]
 
-  generate "#{sourcefile_prefix}.hpp", "../template/hpp.erb", classname, option[:namespace]
-  generate "#{sourcefile_prefix}.cpp", "../template/cpp.erb", classname, option[:namespace]
+  template_dir = "#{File.expand_path(__FILE__)}/../template"
+  generate "#{sourcefile_prefix}.hpp", "#{template_dir}/hpp.erb", classname, option[:namespace]
+  generate "#{sourcefile_prefix}.cpp", "#{template_dir}/cpp.erb", classname, option[:namespace]
 
   test_tokens = option[:classname].dup
   test_tokens << "test"
   testfile_prefix = convert test_tokens, option[:source_convention]
-  generate "#{testfile_prefix}.cpp", "../template/test.erb", classname, option[:namespace]
+  generate "#{testfile_prefix}.cpp", "#{template_dir}/test.erb", classname, option[:namespace]
 
   if option[:main]
     main_tokens = option[:classname].dup
     main_tokens << "main"
     mainfile_prefix = convert main_tokens, option[:source_convention]
-    generate "#{mainfile_prefix}.cpp", "../template/main.erb", classname, option[:namespace]
+    generate "#{mainfile_prefix}.cpp", "#{template_dir}/main.erb", classname, option[:namespace]
   end
 end
 
