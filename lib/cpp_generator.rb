@@ -44,7 +44,7 @@ def main(option)
   classname = convert option[:classname], option[:class_convention]
   namespace = option[:namespace]
 
-  template_dir = "#{File.expand_path(__FILE__)}/../template"
+  template_dir = "#{File.dirname(File.expand_path(__FILE__))}/../template"
   generate "#{sourcefile_prefix}.hpp", "#{template_dir}/hpp.erb", classname, option[:namespace]
   generate "#{sourcefile_prefix}.cpp", "#{template_dir}/cpp.erb", classname, option[:namespace]
 
